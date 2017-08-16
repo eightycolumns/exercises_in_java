@@ -22,8 +22,9 @@ class ConvertIntegerToBinaryString {
 
     StringBuilder binaryString = new StringBuilder();
 
-    for (int i = d; i > 0; i /= 2) {
-      binaryString.insert(0, i % 2);
+    while (d > 0) {
+      binaryString.insert(0, d % 2);
+      d /= 2;
     }
 
     return binaryString.toString();
